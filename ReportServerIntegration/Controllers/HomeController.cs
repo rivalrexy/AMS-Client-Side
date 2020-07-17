@@ -145,6 +145,13 @@ namespace ReportServerIntegration
             return View(model);
         }
 
+        [HttpGet]
+        public async Task<ActionResult> DashboardViewerOperatorActivity(string dashboardId)
+        {
+            var model = await dashboardService.GetViewerModel(dashboardId);
+            return View(model);
+        }
+
         public ActionResult SideMenu()
         {
 
@@ -292,7 +299,16 @@ namespace ReportServerIntegration
             return PartialView("sideMenuShelved", list);
         }
 
+        public ActionResult sideMenuOperatorActivity()
+        {
 
+            List<DOCUMENTBASE> list = new List<DOCUMENTBASE>();
+
+            DOCUMENTBASERepository rep = new DOCUMENTBASERepository(connectionString);
+            list = rep.GetDataOperatorActiv();
+
+            return PartialView("sideMenuOperatorActivity", list);
+        }
 
         public ActionResult MenuConfiguration()
         {

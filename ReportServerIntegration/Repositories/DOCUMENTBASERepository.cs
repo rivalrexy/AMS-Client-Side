@@ -532,6 +532,42 @@ namespace ReportServerIntegration.Repositories
 			return items;
 		}
 
+		public List<DOCUMENTBASE> GetDataOperatorActiv()
+		{
+			List<DOCUMENTBASE> items = new List<DOCUMENTBASE>();
+			using (var conn = new SqlConnection(connString))
+			{
+				Message = "";
+				try
+				{
+					conn.Open();
+					SqlCommand command = new SqlCommand(" SELECT db.[OID] ,sm.[MENU_NAME] ,sm.[CONTROLLER_NAME] ,sm.[VIEW_NAME] ,db.Name  ,sm.[LINK] ,sm.[ISACTIVE]  ,db.ObjectType,sm.PARENT_ID,sm.PARENT_NAME FROM [DevExpressReportServer].[dbo].[SIDE_MENU] AS SM left join DocumentBase as db on db.OID = sm.OID_DOCUMENT_BASE WHERE sm.PARENT_ID = 18 order by ObjectType asc ", conn);
+					SqlDataReader reader = command.ExecuteReader();
+					DOCUMENTBASE item = new DOCUMENTBASE();
+					while (reader.Read())
+					{
+						item = new DOCUMENTBASE();
+						if (reader[0] != DBNull.Value) { item.OID = Convert.ToInt32(reader[0]); }
+						if (reader[1] != DBNull.Value) { item.MENU_NAME = Convert.ToString(reader[1]); }
+						if (reader[2] != DBNull.Value) { item.CONTROLLER_NAME = Convert.ToString(reader[2]); }
+						if (reader[3] != DBNull.Value) { item.VIEW_NAME = Convert.ToString(reader[3]); }
+						if (reader[4] != DBNull.Value) { item.Name = Convert.ToString(reader[4]); }
+						if (reader[5] != DBNull.Value) { item.LINK = Convert.ToString(reader[5]); }
+						if (reader[6] != DBNull.Value) { item.ISACTIVE = Convert.ToInt32(reader[6]); }
+						if (reader[7] != DBNull.Value) { item.ObjectType = Convert.ToInt32(reader[7]); }
+						if (reader[8] != DBNull.Value) { item.PARENT_ID = Convert.ToInt32(reader[8]); }
+						if (reader[9] != DBNull.Value) { item.PARENT_NAME = Convert.ToString(reader[9]); }
+						items.Add(item);
+					}
+				}
+
+				catch (Exception ex)
+				{
+					Message = ex.Message;
+				}
+			}
+			return items;
+		}
 
 		public DataTable GetDataTable(List<DOCUMENTBASE> documentbase)
 		{
