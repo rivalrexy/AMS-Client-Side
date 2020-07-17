@@ -16694,6 +16694,7 @@
     <Content Include="Views\Shared\_Layout - Copy %283%29.cshtml" />
     <Content Include="Views\Shared\_Layout - Copy %284%29.cshtml" />
     <Content Include="Views\Shared\_Layout - Copy %285%29.cshtml" />
+    <Content Include="Views\Home\DashboardViewerKPITrends.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
