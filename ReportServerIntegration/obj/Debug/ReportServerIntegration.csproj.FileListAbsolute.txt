@@ -910,3 +910,6 @@ D:\Work Space\AMS Client Side\AMS Client Side\ReportServerIntegration\obj\Debug\
 D:\Work Space\AMS Client Side\AMS Client Side\ReportServerIntegration\obj\Debug\ReportServerIntegration.csproj.CopyComplete
 D:\Work Space\AMS Client Side\AMS Client Side\ReportServerIntegration\obj\Debug\ReportServerIntegration.dll
 D:\Work Space\AMS Client Side\AMS Client Side\ReportServerIntegration\obj\Debug\ReportServerIntegration.pdb
+C:\Users\SPCUser\source\repos\AMS-Client-Side3\ReportServerIntegration\obj\Debug\ReportServerIntegration.csprojAssemblyReference.cache
+C:\Users\SPCUser\source\repos\AMS-Client-Side3\ReportServerIntegration\obj\Debug\ReportServerIntegration.dll
+C:\Users\SPCUser\source\repos\AMS-Client-Side3\ReportServerIntegration\obj\Debug\ReportServerIntegration.pdb
