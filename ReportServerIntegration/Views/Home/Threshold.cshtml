@@ -1,0 +1,265 @@
+﻿
+
+@model ReportServerIntegration.Models.ViewThreshold
+
+@{
+    ViewBag.Title = "ViewThreshold";
+
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Metric Threshold</h4>
+
+                <form action="/matrix/update" method="POST">
+                   
+                    <div class="form-body">
+
+
+
+                        <table class="table table-borderless" id="table_threshold">
+                            <thead>
+                                <tr>
+                                    @foreach (var actives in Model.allActiveThreshold)
+                                    {
+                                        <th scope="col">Metric Name</th>
+                                        <th style="width: 15%">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="hidden" name="_method" value="PUT">
+                                                @if (actives.active_code_id == "CUSTOM")
+                                                {
+                                                    <input type="radio" id="code0" name="code1" class="custom-control-input" checked="" value="5">
+                                                    <label class="custom-control-label active" for="code0">Custom</label>
+                                                }
+                                                else
+                                                {
+                                                    <input type="radio" id="code0" name="code1" class="custom-control-input" value="5">
+                                                    <label class="custom-control-label" for="code0">Custom</label>
+                                                }
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                @if (actives.active_code_id == "API 1167")
+                                                {
+                                                    <input type="radio" id="code1" name="code1" class="custom-control-input" checked="" value="1">
+                                                    <label class="custom-control-label active" for="code1">API 1167</label>
+                                                }
+                                                else
+                                                {
+                                                    <input type="radio" id="code1" name="code1" class="custom-control-input" value="1">
+                                                    <label class="custom-control-label" for="code1">API 1167</label>
+                                                }
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                @if (actives.active_code_id == "EEMUA 191")
+                                                {
+                                                    <input type="radio" id="code2" name="code1" class="custom-control-input" checked="" value="2">
+                                                    <label class="custom-control-label active" for="code2">EEMUA 191</label>
+                                                }
+                                                else
+                                                {
+                                                    <input type="radio" id="code2" name="code1" class="custom-control-input" value="2">
+                                                    <label class="custom-control-label" for="code2">EEMUA 191</label>
+                                                }
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                @if (actives.active_code_id == "IEC 62682")
+                                                {
+                                                    <input type="radio" id="code3" name="code1" class="custom-control-input" checked="" value="3">
+                                                    <label class="custom-control-label active" for="code3">IEC 62682</label>
+                                                }
+                                                else
+                                                {
+                                                    <input type="radio" id="code3" name="code1" class="custom-control-input" value="3">
+                                                    <label class="custom-control-label" for="code3">IEC 62682</label>
+                                                }
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="custom-control custom-radio custom-control-inline">
+
+                                                @if (actives.active_code_id == "ISA 18.2")
+                                                {
+                                                    <input type="radio" id="code4" name="code1" class="custom-control-input" checked="" value="4">
+                                                    <label class="custom-control-label active" for="code4">ISA 18.2</label>
+                                                }
+                                                else
+                                                {
+                                                    <input type="radio" id="code4" name="code1" class="custom-control-input" value="4">
+                                                    <label class="custom-control-label" for="code4">ISA 18.2</label>
+                                                }
+                                            </div>
+                                        </th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+
+
+
+                                @foreach (var data in Model.allMetricThreshold)
+                                {
+                                <tr id=@data.id>
+
+                                    @if (data.code_id == "CUSTOM")
+
+                                    {
+
+                                        <td id="name">
+                                            <p>@data.metric_name</p>
+
+                                        </td>
+
+                                    }
+                                    @if (data.code_id == "CUSTOM")
+                                    {
+                                        if (data.threshold == null)
+                                        {
+                                            <td><input class="form-control" name=@data.id type="number" value="0" id="example-number-input"></td>
+                                        }
+
+                                        else
+                                        {
+                                            <td>
+                                                <p>< input class="form-control" name=@data.id type="number" value=@data.threshold id="example-number-input"></p>
+                                            </td>
+                                        }
+                                    }
+
+
+                                    @if (data.code_id == "API 1167")
+
+                                    {
+
+                                        if (data.threshold == null)
+                                        {
+
+                                            <td><p>-</p></td>
+                                        }
+
+                                        else
+                                        {
+                                            <td><p>@data.threshold</p></td>
+
+
+
+                                        }
+                                    }
+
+                                    @if (data.code_id == "EEMUA 191")
+
+                                    {
+
+                                        if (data.threshold == null)
+                                        {
+
+                                            <td><p>-</p></td>
+                                        }
+
+                                        else
+                                        {
+                                            <td><p>@data.threshold</p></td>
+
+
+
+                                        }
+                                    }
+
+
+                                    @if (data.code_id == "IEC 62682")
+
+                                    {
+
+                                        if (data.threshold == null)
+                                        {
+
+                                            <td><p>-</p></td>
+                                        }
+
+                                        else
+                                        {
+                                            <td><p>@data.threshold</p></td>
+
+
+
+                                        }
+                                    }
+
+                                    @if (data.code_id == "ISA 18.2")
+
+                                    {
+
+                                        if (data.threshold == null)
+                                        {
+
+                                            <td><p>-</p></td>
+                                        }
+
+                                        else
+                                        {
+                                            <td><p>@data.threshold</p></td>
+
+
+
+                                        }
+                                    }
+
+
+                                </tr>
+
+
+                                        }
+                                    </tbody>
+                        </table>
+                            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+                                        if ($('input[name=code1]:checked').val() == "5") {
+            $(".form-control").prop('disabled', false);
+                                        } else {
+            $(".form-control").prop('disabled', true);
+                                        }
+
+                                        var a = 26, b = 51, c = 76, d = 101;
+                                        for (i = 1; i < 26; i++) {
+            $('#' + i).append($('#' + a).contents());
+            $('#' + i).append($('#' + b).contents());
+            $('#' + i).append($('#' + c).contents());
+            $('#' + i).prepend($('#' + d).contents());
+                                            a++;
+                                            b++;
+                                            c++;
+                                            d++;
+                                        }
+                                        for (i = 26; i < 126; i++) {
+            $('table#table_threshold tr#' + i).remove()
+                                        }
+
+        $("input[name=code1]:radio").click(function () {
+                                            if ($('input[name=code1]:checked').val() == "5") {
+                $(".form-control").prop('disabled', false);
+                                            } else {
+                $(".form-control").prop('disabled', true);
+                                            }
+                                        });
+
+                                    })
+</script>
+

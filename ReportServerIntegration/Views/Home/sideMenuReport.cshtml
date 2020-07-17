@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ReportServerIntegration.Models.DOCUMENTBASE>
+
+@if (Model != null)
+{
+
+    foreach (var document in Model)
+    {
+
+        <li class="nav-item active open">
+
+
+
+            @if (document.PARENT_ID == 4 && document.ObjectType == 21)
+
+            {
+                @Html.ActionLink(document.MENU_NAME, document.VIEW_NAME, new { reportId = document.OID })
+            }
+            else if (document.PARENT_ID == 4 && document.ObjectType == 2)
+            {
+
+                @Html.ActionLink(document.MENU_NAME, document.VIEW_NAME, new { dashboardId = document.OID })
+            }
+
+        </li>
+
+    }
+}

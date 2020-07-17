@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ReportServerIntegration.Models.DOCUMENTBASE>
+
+
+
+
+
+
+    
+
+        @if (Model != null)
+        {
+
+            foreach (var document in Model)
+            {
+
+                <li class="nav-item active open">
+
+
+
+                    @if (document.ObjectType == 21)
+                    {
+                        @Html.ActionLink(document.MENU_NAME, document.VIEW_NAME, new { reportId = document.OID })
+                    }
+                  
+
+                </li>
+
+            }
+        }
+
+
+

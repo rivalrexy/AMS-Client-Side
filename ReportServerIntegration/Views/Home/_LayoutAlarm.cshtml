@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ReportServerIntegration.Models.DOCUMENTBASE>
+
+
+
+
+
+
+@if (Model != null)
+{
+
+    foreach (var document in Model)
+    {
+
+
+    <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+
+
+        @*@if (document.PARENT_ID == 7 && document.ObjectType == 21)
+
+        {*@
+
+        @*<a href="@Url.Action(document.VIEW_NAME, document.CONTROLLER_NAME)" class="menu-link menu-toggle">
+
+            @Html.Raw(document.MENU_NAME)
+            <i class="menu-bullet menu-bullet-line"><span></span></i>
+            <span class="menu-text">@document.MENU_NAME</span>
+            <span class="menu-label"><span class="label label-rounded label-primary">6</span></span>
+            <i class="menu-arrow"></i>
+        </a>*@
+        <a href="@Url.Action(document.VIEW_NAME, document.CONTROLLER_NAME   , new { reportId = document.OID })" class="menu-link menu-toggle">
+
+            <i class="menu-bullet menu-bullet-line">
+                <span>
+                </span>
+            </i><span class="menu-text">@document.MENU_NAME</span><span class="menu-label"></span>
+            <i class="menu-arrow"></i>
+        </a>
+
+
+        @*@Html.ActionLink(document.MENU_NAME, document.VIEW_NAME, new { dashboardId = document.OID })*@
+        
+
+
+
+
+
+    </li>
+
+
+
+
+
+
+    }
+}
+
+
+
+
+

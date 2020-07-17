@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ReportServerIntegration.Models.DOCUMENTBASE>
+
+
+
+
+
+
+
+
+
+
+
+@if (Model != null)
+{
+
+    foreach (var document in Model)
+    {
+
+
+            <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+
+
+                @*@Html.ActionLink(document.MENU_NAME, document.VIEW_NAME, new { reportId = document.OID })*@
+
+                <a href="@Url.Action(document.VIEW_NAME, document.CONTROLLER_NAME   , new { reportId = document.OID })" class="menu-link menu-toggle">
+
+                    <i class="menu-bullet menu-bullet-line">
+                        <span>
+                        </span>
+                    </i><span class="menu-text">@document.MENU_NAME</span><span class="menu-label"></span>
+                    <i class="menu-arrow"></i>
+                </a>
+
+
+
+            </li>
+
+            }
+
+ }
+
+
