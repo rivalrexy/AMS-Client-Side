@@ -68,6 +68,13 @@ namespace ReportServerIntegration
         }
 
         [HttpGet]
+        public async Task<ActionResult> DashboardViewerKPITrends(string dashboardId)
+        {
+            var model = await dashboardService.GetViewerModel(dashboardId);
+            return View(model);
+        }
+
+        [HttpGet]
         public async Task<ActionResult> DashboardViewerShelved(string dashboardId)
         {
             var model = await dashboardService.GetViewerModel(dashboardId);
