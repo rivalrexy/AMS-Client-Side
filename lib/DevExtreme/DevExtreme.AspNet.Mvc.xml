@@ -4539,7 +4539,13 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.FalseText(DevExtreme.AspNet.Mvc.JS)">
             <summary>In a boolean column, replaces all false items with a specified text. Applies only if showEditorAlways option is false.</summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.FilterOperations})">
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.GridFilterOperations})">
+            <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.FilterOperations(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.FilterType(DevExtreme.AspNet.Mvc.FilterType)">
@@ -4731,6 +4737,9 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.Width(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies the column&#39;s width in pixels or as a percentage. Ignored if it is less than minWidth.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.FilterOperations})">
+            <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true.</summary>
+        </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.DataGridColumnButtonBuilder">
             <summary>Allows you to customize buttons in the editing column or create a custom command column. Applies only if the column&#39;s type is &quot;buttons&quot;.</summary>
         </member>
@@ -4906,25 +4915,25 @@
             <summary>Specifies whether searching is enabled in the header filter.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.DataSource(System.String)">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.DataSource(DevExtreme.AspNet.Mvc.RazorBlock)">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.DataSource(System.Func{DevExtreme.AspNet.Mvc.Factories.DataSourceFactory,DevExtreme.AspNet.Mvc.Builders.OptionsOwnerBuilder})">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.DataSource(System.String,System.String[])">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.DataSource(System.Collections.IEnumerable,System.String[])">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.DataSource(DevExtreme.AspNet.Mvc.JS)">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.DataSourceOptions(System.Action{DevExtreme.AspNet.Mvc.Builders.DataSources.DataSourceOptionsBuilder})">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridColumnHeaderFilterBuilder.GroupInterval(DevExtreme.AspNet.Mvc.HeaderFilterGroupInterval)">
             <summary>Specifies how the header filter combines values into groups.</summary>
@@ -6861,6 +6870,9 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramBuilder.CustomShapeTemplate(System.Action)">
             <summary>Specifies a custom template for shapes.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramBuilder.DefaultItemProperties(System.Action{DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder})">
+            <summary>Configures default item properties.</summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramBuilder.Disabled(System.Boolean)">
             <summary>Specifies whether the widget responds to user interaction.</summary>
         </member>
@@ -7119,6 +7131,9 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder.Items(System.Action{DevExtreme.AspNet.Mvc.Factories.CollectionFactory{DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder}})">
             <summary>Lists command sub items.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder.Name(DevExtreme.AspNet.Mvc.DiagramCommand)">
+            <summary>Specifies the custom command&#39;s identifier.</summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder.Name(System.String)">
             <summary>Specifies the custom command&#39;s identifier.</summary>
         </member>
@@ -7374,8 +7389,26 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomShapesConnectionPointBuilder.Y(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies the vertical offset.</summary>
         </member>
+        <member name="T:DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder">
+            <summary>Configures default item properties.</summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder.Option(System.String,System.Object)">
             <summary>Specifies an option by its name.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder.ConnectorLineEnd(DevExtreme.AspNet.Mvc.DiagramConnectorLineEnd)">
+            <summary>Specifies the default tip of a connector&#39;s end point.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder.ConnectorLineStart(DevExtreme.AspNet.Mvc.DiagramConnectorLineEnd)">
+            <summary>Specifies the default tip of a connector&#39;s start point.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder.ConnectorLineType(DevExtreme.AspNet.Mvc.DiagramConnectorLineType)">
+            <summary>Specifies the default type of a connector.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder.Style(System.Object)">
+            <summary>Specifies a default item style.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramDefaultItemPropertiesBuilder.TextStyle(System.Object)">
+            <summary>Specifies an item&#39;s default text style.</summary>
         </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.DiagramEdgesBuilder">
             <summary>Allows you to bind the collection of diagram edges to a data source. For more information, see the Data Binding section.</summary>
@@ -8180,12 +8213,6 @@
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DrawerBuilder.Shading(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies whether to shade the view when the drawer is opened.</summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DrawerBuilder.Target(System.String)">
-            <summary>Specifies a CSS selector for the element in which the drawer should be rendered. Applies only when the openedStateMode is &quot;overlap&quot;.</summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DrawerBuilder.Target(DevExtreme.AspNet.Mvc.JS)">
-            <summary>Specifies a CSS selector for the element in which the drawer should be rendered. Applies only when the openedStateMode is &quot;overlap&quot;.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DrawerBuilder.Template(System.String)">
             <summary>Specifies the drawer&#39;s content.</summary>
@@ -9689,6 +9716,18 @@
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.HoverStateEnabled(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies whether the widget changes its state when a user pauses on it.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.InputAttr(System.String,System.Object)">
+            <summary>Specifies the attributes to be passed on to the underlying `` element of the `file` type.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.InputAttr(System.Object)">
+            <summary>Specifies the attributes to be passed on to the underlying `` element of the `file` type.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.InputAttr(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>Specifies the attributes to be passed on to the underlying `` element of the `file` type.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.InputAttr(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the attributes to be passed on to the underlying `` element of the `file` type.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.InvalidFileExtensionMessage(System.String)">
             <summary>The text displayed when the extension of the file being uploaded is not an allowed file extension.</summary>
@@ -20409,17 +20448,17 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowDragging(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies whether or not an end-user can drag appointments.</summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowEditingTimeZones(System.Boolean)">
-            <summary>Specifies whether users can edit appointment time zones.</summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowEditingTimeZones(DevExtreme.AspNet.Mvc.JS)">
-            <summary>Specifies whether users can edit appointment time zones.</summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowResizing(System.Boolean)">
             <summary>Specifies whether or not an end-user can change an appointment duration.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowResizing(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies whether or not an end-user can change an appointment duration.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowTimeZoneEditing(System.Boolean)">
+            <summary>Specifies whether users can edit appointment time zones.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowTimeZoneEditing(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies whether users can edit appointment time zones.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerEditingBuilder.AllowUpdating(System.Boolean)">
             <summary>Specifies whether or not an end-user can change appointment options.</summary>
@@ -26370,7 +26409,13 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnBuilder`1.FalseText(DevExtreme.AspNet.Mvc.JS)">
             <summary>In a boolean column, replaces all false items with a specified text. Applies only if showEditorAlways option is false.</summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.FilterOperations})">
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.GridFilterOperations})">
+            <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnBuilder`1.FilterOperations(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnBuilder`1.FilterType(DevExtreme.AspNet.Mvc.FilterType)">
@@ -26710,25 +26755,25 @@
             <summary>Specifies whether searching is enabled in the header filter.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.DataSource(System.String)">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.DataSource(DevExtreme.AspNet.Mvc.RazorBlock)">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.DataSource(System.Func{DevExtreme.AspNet.Mvc.Factories.DataSourceFactory,DevExtreme.AspNet.Mvc.Builders.OptionsOwnerBuilder})">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.DataSource(System.String,System.String[])">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.DataSource(System.Collections.IEnumerable,System.String[])">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.DataSource(DevExtreme.AspNet.Mvc.JS)">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.DataSourceOptions(System.Action{DevExtreme.AspNet.Mvc.Builders.DataSources.DataSourceOptionsBuilder})">
-            <summary>Specifies a data source for the header filter.</summary>
+            <summary>Specifies the header filter&#39;s data source.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListColumnHeaderFilterBuilder.GroupInterval(DevExtreme.AspNet.Mvc.HeaderFilterGroupInterval)">
             <summary>Specifies how the header filter combines values into groups.</summary>

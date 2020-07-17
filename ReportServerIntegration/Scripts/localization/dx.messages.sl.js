@@ -1,7 +1,7 @@
 /*!
 * DevExtreme (dx.messages.sl.js)
-* Version: 20.1.3
-* Build date: Fri Apr 24 2020
+* Version: 20.1.4
+* Build date: Tue Jun 02 2020
 *
 * Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -293,6 +293,7 @@
             "dxFileManager-errorWrongFileExtension": "TODO",
             "dxFileManager-errorMaxFileSizeExceeded": "TODO",
             "dxFileManager-errorInvalidSymbols": "TODO",
+            "dxFileManager-errorDirectoryOpenFailed": "TODO",
             "dxDiagram-categoryGeneral": "TODO",
             "dxDiagram-categoryFlowchart": "TODO",
             "dxDiagram-categoryOrgChart": "TODO",

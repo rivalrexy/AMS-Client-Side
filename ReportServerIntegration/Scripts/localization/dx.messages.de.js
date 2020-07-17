@@ -1,7 +1,7 @@
 /*!
 * DevExtreme (dx.messages.de.js)
-* Version: 20.1.3
-* Build date: Fri Apr 24 2020
+* Version: 20.1.4
+* Build date: Tue Jun 02 2020
 *
 * Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -199,8 +199,8 @@
             "dxScheduler-editorLabelRecurrence": "Wiederholen",
             "dxScheduler-openAppointment": "Termin \xf6ffnen",
             "dxScheduler-recurrenceNever": "Nie",
-            "dxScheduler-recurrenceMinutely": "TODO!",
-            "dxScheduler-recurrenceHourly": "TODO!",
+            "dxScheduler-recurrenceMinutely": "Min\xfctlich",
+            "dxScheduler-recurrenceHourly": "St\xfcndlich",
             "dxScheduler-recurrenceDaily": "T\xe4glich",
             "dxScheduler-recurrenceWeekly": "W\xf6chentlich",
             "dxScheduler-recurrenceMonthly": "Monatlich",
@@ -210,8 +210,8 @@
             "dxScheduler-recurrenceEnd": "Wiederholungsende",
             "dxScheduler-recurrenceAfter": "Nach",
             "dxScheduler-recurrenceOn": "Am",
-            "dxScheduler-recurrenceRepeatMinutely": "TODO!",
-            "dxScheduler-recurrenceRepeatHourly": "TODO!",
+            "dxScheduler-recurrenceRepeatMinutely": "Minute(n)",
+            "dxScheduler-recurrenceRepeatHourly": "Stunde(n)",
             "dxScheduler-recurrenceRepeatDaily": "Tag(e)",
             "dxScheduler-recurrenceRepeatWeekly": "Woche(n)",
             "dxScheduler-recurrenceRepeatMonthly": "Monat(e)",
@@ -295,10 +295,11 @@
             "dxFileManager-errorMaxFileSizeExceeded": "Die Dateigr\xf6\xdfe \xfcbersteigt die maximal erlaubte Gr\xf6\xdfe.",
             "dxFileManager-errorInvalidSymbols": "Der Dateiname enth\xe4lt ung\xfcltige Zeichen.",
             "dxFileManager-errorDefault": "Unbekannter Fehler",
+            "dxFileManager-errorDirectoryOpenFailed": "Das Verzeichnis kann nicht ge\xf6ffnet werden",
             "dxFileManager-commandCreate": "Neues Verzeichnis",
             "dxFileManager-commandRename": "Umbenennen",
-            "dxFileManager-commandMove": "TODO",
-            "dxFileManager-commandCopy": "TODO",
+            "dxFileManager-commandMove": "Verschieben nach",
+            "dxFileManager-commandCopy": "Kopieren nach",
             "dxFileManager-commandDelete": "L\xf6schen",
             "dxFileManager-commandDownload": "Herunterladen",
             "dxFileManager-commandUpload": "Dateien hochladen",
@@ -306,18 +307,18 @@
             "dxFileManager-commandThumbnails": "Miniaturansicht",
             "dxFileManager-commandDetails": "Detailansicht",
             "dxFileManager-commandClearSelection": "Auswahl aufheben",
-            "dxFileManager-dialogDirectoryChooserMoveTitle": "TODO",
+            "dxFileManager-dialogDirectoryChooserMoveTitle": "Verschieben nach",
             "dxFileManager-dialogDirectoryChooserMoveButtonText": "Verschieben",
-            "dxFileManager-dialogDirectoryChooserCopyTitle": "TODO",
+            "dxFileManager-dialogDirectoryChooserCopyTitle": "Kopieren nach",
             "dxFileManager-dialogDirectoryChooserCopyButtonText": "Kopieren",
             "dxFileManager-dialogRenameItemTitle": "Umbenennen",
             "dxFileManager-dialogRenameItemButtonText": "Speichern",
             "dxFileManager-dialogCreateDirectoryTitle": "Neues Verzeichnis",
             "dxFileManager-dialogCreateDirectoryButtonText": "Erstellen",
-            "dxFileManager-dialogDeleteItemTitle": "TODO",
-            "dxFileManager-dialogDeleteItemButtonText": "TODO",
-            "dxFileManager-dialogDeleteItemSingleItemConfirmation": "TODO",
-            "dxFileManager-dialogDeleteItemMultipleItemsConfirmation": "TODO",
+            "dxFileManager-dialogDeleteItemTitle": "L\xf6schen",
+            "dxFileManager-dialogDeleteItemButtonText": "L\xf6schen",
+            "dxFileManager-dialogDeleteItemSingleItemConfirmation": "Sind Sie sicher, dass Sie {0} l\xf6schen m\xf6chten?",
+            "dxFileManager-dialogDeleteItemMultipleItemsConfirmation": "Sind Sie sicher, dass Sie {0} Elemente l\xf6schen m\xf6chten?",
             "dxFileManager-dialogButtonCancel": "Abbrechen",
             "dxFileManager-editingCreateSingleItemProcessingMessage": "Ein Verzeichnis wird in {0} erstellt",
             "dxFileManager-editingCreateSingleItemSuccessMessage": "Ein Verzeichnis wurde in {0} erstellt",
@@ -519,15 +520,15 @@
             "dxGantt-dialogCancelOperationMessage": "Vorgang abbrechen",
             "dxGantt-dialogDeleteDependencyMessage": "Abh\xe4ngigkeit l\xf6schen",
             "dxGantt-dialogMoveTaskAndKeepDependencyMessage": "Aufgabe verschieben und Abh\xe4ngigkeit beibehalten",
-            "dxGantt-undo": "TODO",
-            "dxGantt-redo": "TODO",
-            "dxGantt-expandAll": "TODO",
-            "dxGantt-collapseAll": "TODO",
-            "dxGantt-addNewTask": "TODO",
-            "dxGantt-deleteSelectedTask": "TODO",
-            "dxGantt-zoomIn": "TODO",
-            "dxGantt-zoomOut": "TODO",
-            "dxGantt-fullScreen": "TODO"
+            "dxGantt-undo": "R\xfcckg\xe4ngig",
+            "dxGantt-redo": "Wiederherstellen",
+            "dxGantt-expandAll": "Alle erweitern",
+            "dxGantt-collapseAll": "Alle reduzieren",
+            "dxGantt-addNewTask": "Neue Aufgabe hinzuf\xfcgen",
+            "dxGantt-deleteSelectedTask": "Ausgew\xe4hlte Aufgabe l\xf6schen",
+            "dxGantt-zoomIn": "Vergr\xf6\xdfern",
+            "dxGantt-zoomOut": "Verkleinern",
+            "dxGantt-fullScreen": "Vollbildmodus"
         }
     })
 });

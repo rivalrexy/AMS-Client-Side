@@ -1,7 +1,7 @@
 /*!
 * DevExtreme (dx.messages.hu.js)
-* Version: 20.1.3
-* Build date: Fri Apr 24 2020
+* Version: 20.1.4
+* Build date: Tue Jun 02 2020
 *
 * Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -294,6 +294,7 @@
             "dxFileManager-errorWrongFileExtension": "Nem enged\xe9lyezett f\xe1jlt\xedpus",
             "dxFileManager-errorMaxFileSizeExceeded": "A f\xe1jlm\xe9ret meghaladja a megengedett legnagyobb m\xe9retet",
             "dxFileManager-errorDefault": "Ismeretlen hiba.",
+            "dxFileManager-errorDirectoryOpenFailed": "TODO",
             "dxDiagram-categoryGeneral": "\xc1ltal\xe1nos",
             "dxDiagram-categoryFlowchart": "Folyamat\xe1bra",
             "dxDiagram-categoryOrgChart": "Szervezeti \xe1bra",
